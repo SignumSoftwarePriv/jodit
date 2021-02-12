@@ -1,3 +1,4 @@
+// @ts-nocheck
 /*!
  * Jodit Editor (https://xdsoft.net/jodit/)
  * Released under MIT see LICENSE.txt in the project root for license information.
