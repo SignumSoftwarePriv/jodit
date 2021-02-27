@@ -14394,7 +14394,7 @@ var Stack = (function () {
         return false;
     };
     Stack.prototype.canUndo = function () {
-        return this.stackPosition >= 0;
+        return this.stackPosition > 0;
     };
     Stack.prototype.canRedo = function () {
         return this.stackPosition < this.commands.length - 1;

@@ -4632,7 +4632,7 @@ class Stack {
         return false;
     }
     canUndo() {
-        return this.stackPosition >= 0;
+        return this.stackPosition > 0;
     }
     canRedo() {
         return this.stackPosition < this.commands.length - 1;
