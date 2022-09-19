@@ -12591,7 +12591,7 @@ const formTemplate = (editor) => {
         new ui_form/* UIBlock */.eC(editor, [
             new ui_form/* UIInput */.u3(editor, {
                 name: 'url',
-                type: 'url',
+                type: 'input',
                 ref: 'url_input',
                 label: 'URL',
                 placeholder: 'http://',
@@ -12869,9 +12869,9 @@ class link_link extends Plugin {
             });
         }
         const onSubmit = () => {
-            if (!url_input.value.trim().length) {
+			if (!(0,helpers.isURL)((0,helpers.trim)(url_input.value))) {
                 url_input.focus();
-                url_input.classList.add('jodit_error');
+                url_input.classList.add('jodit-form', 'jodit_error');
                 return false;
             }
             let links;
@@ -19313,7 +19313,7 @@ function isPromise(val) {
  * Copyright (c) 2013-2020 Valeriy Chupurnov. All rights reserved. https://xdsoft.net
  */
 function isURL(str) {
-	const localPattern = new RegExp('^\\/(\\/\\w+(.\\w+)*)*', 'i');
+	const localPattern = new RegExp('^\\/(\\w+(.\\w+)*)', 'i');
     const pattern = new RegExp('^(https?:\\/\\/)' +
         '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.?)+[a-z]{2,}|' +
         '((\\d{1,3}\\.){3}\\d{1,3}))' +

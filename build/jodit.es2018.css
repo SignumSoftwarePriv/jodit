@@ -140,8 +140,9 @@
   color: var(--jd-color-default);
 }
 .jodit-form.jodit_error {
+  background-color:#80808024;
   border-color: var(--jd-color-error);
-  box-shadow: inset 0 0 3px 0 rgba(189, 189, 189, 0.3);
+  box-shadow: inset 0 0 3px 0 rgba(255, 0, 0, 0.5);
 }
 @media (max-width: 768px) {
   .jodit-form {
