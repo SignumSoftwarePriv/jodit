@@ -27012,6 +27012,7 @@ var template_1 = __webpack_require__(286);
 var plugin_1 = __webpack_require__(175);
 var decorators_1 = __webpack_require__(38);
 var modules_1 = __webpack_require__(115);
+var validators_1 = __webpack_require__(156);
 config_1.Config.prototype.link = {
     formTemplate: template_1.formTemplate,
     followOnDblClick: false,
@@ -27209,7 +27210,7 @@ var link = (function (_super) {
             });
         }
         var onSubmit = function () {
-            if (!url_input.value.trim().length) {
+            if (!validators_1.required(url_input) || !validators_1.url(url_input)) {
                 url_input.focus();
                 url_input.classList.add('jodit_error');
                 return false;
@@ -27330,7 +27331,7 @@ var formTemplate = function (editor) {
         new form_1.UIBlock(editor, [
             new form_1.UIInput(editor, {
                 name: 'url',
-                type: 'url',
+                type: 'input',
                 ref: 'url_input',
                 label: 'URL',
                 placeholder: 'http://',
