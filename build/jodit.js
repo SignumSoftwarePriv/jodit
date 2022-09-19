@@ -27212,7 +27212,7 @@ var link = (function (_super) {
         var onSubmit = function () {
             if (!validators_1.required(url_input) || !validators_1.url(url_input)) {
                 url_input.focus();
-                url_input.classList.add('jodit_error');
+                url_input.classList.add('jodit-form', 'jodit_error');
                 return false;
             }
             var links;
