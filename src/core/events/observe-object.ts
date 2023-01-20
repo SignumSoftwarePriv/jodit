@@ -143,6 +143,6 @@ export class ObserveObject {
 			return data as any;
 		}
 
-		return new ObserveObject(data, prefix) as any;
+		return new ObserveObject(data as IDictionary<any>, prefix) as any;
 	}
 }
