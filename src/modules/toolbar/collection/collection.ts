@@ -84,7 +84,7 @@ export class ToolbarCollection<T extends IViewBased = IViewBased>
 			return true;
 		}
 
-		let isDisabled: boolean | void;
+		let isDisabled: boolean | void = false;
 
 		if (isFunction(button.control.isDisabled)) {
 			isDisabled = button.control.isDisabled(
