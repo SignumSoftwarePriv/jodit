@@ -63,7 +63,7 @@ export class LocalStorageProvider<T = StorageValueType> implements IStorage<T> {
 
 			const json = buffer ? JSON.parse(buffer) : {};
 
-			return json[key] !== undefined ? json[key] : null;
+			return json[key] !== undefined ? json[key] : null!;
 		} catch {}
 	}
 
