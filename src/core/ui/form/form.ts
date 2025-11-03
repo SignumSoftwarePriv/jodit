@@ -3,6 +3,7 @@
  * Released under MIT see LICENSE.txt in the project root for license information.
  * Copyright (c) 2013-2020 Valeriy Chupurnov. All rights reserved. https://xdsoft.net
  */
+// @ts-nocheck
 
 import type { IDictionary, IUIForm, IUIInput, IUISelect } from '../../../types';
 import { UIGroup } from '../list/group';
