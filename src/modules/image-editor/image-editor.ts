@@ -838,7 +838,7 @@ export class ImageEditor extends ViewComponent {
 	}
 
 	/** @override */
-	destruct(): any {
+	override destruct(): any {
 		if (this.isDestructed) {
 			return;
 		}

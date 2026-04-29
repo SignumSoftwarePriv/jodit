@@ -56,7 +56,7 @@ export class UISelect extends UIElement implements IUISelect {
 	}
 
 	/** @override **/
-	protected createContainer(options: this['options']): HTMLElement {
+	protected override createContainer(options: this['options']): HTMLElement {
 		const container = super.createContainer();
 
 		if (!this.nativeInput) {

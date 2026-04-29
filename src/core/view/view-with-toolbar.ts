@@ -155,14 +155,14 @@ export abstract class ViewWithToolbar extends View implements IViewWithToolbar {
 	/** @override **/
 	protected constructor(
 		options?: IViewOptions,
-		readonly isJodit: boolean = false
+		override readonly isJodit: boolean = false
 	) {
 		super(options, isJodit);
 
 		this.e.on('beforeToolbarBuild', this.beforeToolbarBuild);
 	}
 
-	destruct(): void {
+	override destruct(): void {
 		if (this.isDestructed) {
 			return;
 		}

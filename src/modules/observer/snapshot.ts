@@ -247,7 +247,7 @@ export class Snapshot extends ViewComponent<IJodit> {
 		}
 	}
 
-	destruct(): void {
+	override destruct(): void {
 		this.isBlocked = false;
 		super.destruct();
 	}

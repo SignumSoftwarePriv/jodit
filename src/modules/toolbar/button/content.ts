@@ -22,12 +22,12 @@ export class ToolbarContent<T extends IViewBased = IViewBased>
 	extends UIButton
 	implements IToolbarButton {
 	/** @override */
-	className(): string {
+	override className(): string {
 		return 'ToolbarContent';
 	}
 
 	/** @override */
-	update(): void {
+	override update(): void {
 		const content = this.control.getContent(this.j, this.control, this);
 
 		if (isString(content) || content.parentNode !== this.container) {
@@ -42,7 +42,7 @@ export class ToolbarContent<T extends IViewBased = IViewBased>
 	}
 
 	/** @override */
-	protected createContainer(): HTMLElement {
+	protected override createContainer(): HTMLElement {
 		return this.j.c.span(this.componentName);
 	}
 

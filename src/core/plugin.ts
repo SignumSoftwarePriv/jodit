@@ -41,7 +41,7 @@ export abstract class Plugin extends ViewComponent<IJodit> implements IPlugin {
 	}
 
 	@autobind
-	destruct(): void {
+	override destruct(): void {
 		if (!this.isInDestruct) {
 			this.setStatus(STATUSES.beforeDestruct);
 

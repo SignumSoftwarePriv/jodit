@@ -204,7 +204,7 @@ export abstract class UIElement<T extends IViewBased = IViewBased>
 	}
 
 	/** @override */
-	destruct(): any {
+	override destruct(): any {
 		Dom.safeRemove(this.container);
 		this.parentElement = null;
 		return super.destruct();

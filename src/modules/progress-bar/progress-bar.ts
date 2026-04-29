@@ -40,7 +40,7 @@ export class ProgressBar extends ViewComponent implements IProgressBar {
 		return this;
 	}
 
-	destruct(): any {
+	override destruct(): any {
 		this.hide();
 		return super.destruct();
 	}

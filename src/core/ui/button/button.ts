@@ -182,7 +182,7 @@ export class UIButton extends UIElement implements IUIButton {
 	}
 
 	/** @override */
-	protected createContainer(): HTMLElement {
+	protected override createContainer(): HTMLElement {
 		const cn = this.componentName;
 
 		const button = this.j.c.element('button', {
@@ -217,7 +217,7 @@ export class UIButton extends UIElement implements IUIButton {
 		}
 	}
 
-	destruct(): any {
+	override destruct(): any {
 		this.j.e.off(this.container);
 		return super.destruct();
 	}

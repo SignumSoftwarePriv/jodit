@@ -57,7 +57,7 @@ export class UIGroup<T extends IViewBased = IViewBased>
 	 * Update all children
 	 */
 	@watch('buttonSize')
-	update(): void {
+	override update(): void {
 		this.elements.forEach(elm => elm.update());
 		this.setMod('size', this.buttonSize);
 	}
@@ -92,7 +92,7 @@ export class UIGroup<T extends IViewBased = IViewBased>
 	}
 
 	/** @override */
-	destruct(): any {
+	override destruct(): any {
 		this.clear();
 		return super.destruct();
 	}
